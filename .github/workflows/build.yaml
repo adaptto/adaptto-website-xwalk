@@ -12,8 +12,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
     steps:
     - uses: actions/checkout@v4
@@ -28,9 +26,3 @@ jobs:
     - run: npm install
     - run: npm run lint
     - run: npm test
-
-    - uses: SonarSource/sonarcloud-github-action@master
-      if: env.SONAR_TOKEN != null
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        SONAR_TOKEN: ${{ env.SONAR_TOKEN }}

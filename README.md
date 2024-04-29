@@ -1,13 +1,12 @@
-# adaptTo() Website
+# adaptTo() Website - X-Walk Experimental
 
-[![Build](https://github.com/adaptto/adaptto-website/workflows/Build/badge.svg?branch=main)](https://github.com/adaptto/adaptto-website/actions?query=workflow%3ABuild+branch%3Amain)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=adaptto_adaptto-website&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=adaptto_adaptto-website) [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=adaptto_adaptto-website&metric=coverage)](https://sonarcloud.io/summary/new_code?id=adaptto_adaptto-website)
+[![Build](https://github.com/adaptto/adaptto-website-xwalk/workflows/Build/badge.svg?branch=main)](https://github.com/adaptto/adaptto-website-xwalk/actions?query=workflow%3ABuild+branch%3Amain)
 
-adaptTo() Website based on Edge Delivery Services (AEM Franklin).
+adaptTo() Website based on Edge Delivery Services (AEM Franklin) - Experimental Version with X-Walk Support (authoring in AEMaaCS Author).
 
 ## Environments
-- Preview: https://main--adaptto-website--adaptto.hlx.page/
-- Live: https://adapt.to/ (https://main--adaptto-website--adaptto.hlx.live/)
+- Preview: https://main--adaptto-website-xwalk--adaptto.hlx.page/
+- Live: https://main--adaptto-website-xwalk--adaptto.hlx.live/
 
 ## Installation
 
