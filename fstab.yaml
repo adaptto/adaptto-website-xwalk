@@ -1,2 +1,5 @@
 mountpoints:
-  /: https://agetoservice.sharepoint.com/sites/adaptto-website/Shared%20Documents
+  /:
+    url: "https://author-p14256-e706089.adobeaemcloud.com/bin/franklin.delivery/adaptto/adaptto-website-xwalk/main"
+    type: "markup"
+    suffix: ".html"
