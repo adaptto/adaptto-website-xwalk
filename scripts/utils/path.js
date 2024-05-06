@@ -1,5 +1,5 @@
 const urlPathRegex = /^(https?:\/\/[^/]+)?\/.*$/;
-const yearPathRegex = /^(\/content\/adaptto\/xwalk)?\/(\d\d\d\d)\/(.+)?$/;
+const yearPathRegex = /^\/(\d\d\d\d)\/(.+)?$/;
 
 /**
  * Checks if the given value is a path.
@@ -81,9 +81,22 @@ export function getDocumentName(value) {
  * @returns {number} Year or undefined
  */
 export function getYearFromPath(pathName) {
-  const yearPathMatch = pathName.match(yearPathRegex);
+  const yearPathMatch = removeXWalkPrefix(pathName).match(yearPathRegex);
   if (yearPathMatch) {
-    return parseInt(yearPathMatch[2], 10);
+    return parseInt(yearPathMatch[1], 10);
   }
   return undefined;
+}
+
+/**
+ * Remove /content/... prefix that may be present in author environment.
+ * @param {string} pathName Path name.
+ * @returns {string} Path name without /content/... prefix.
+ */
+export function removeXWalkPrefix(pathName) {
+  const prefix = '/content/adaptto/xwalk'
+  if (pathName.startsWith(prefix)) {
+    return pathName.substring(prefix.length);
+  }
+  return pathName
 }

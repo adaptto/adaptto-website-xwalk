@@ -1,6 +1,6 @@
 import { append } from './dom.js';
 import { getQueryIndex } from '../services/QueryIndex.js';
-import { getYearFromPath } from './path.js';
+import { getYearFromPath, removeXWalkPrefix } from './path.js';
 
 const siteRootRegex = /^(\/\d\d\d\d\/)(.+)?$/;
 const speakerPathRegex = /^\/speakers\/[^/]+$/;
@@ -16,7 +16,7 @@ const yearHashRegex = /^#(\d\d\d\d)$/;
  * @returns {string} Site root path
  */
 export function getSiteRootPath(pathName) {
-  const siteRootMatch = pathName.match(siteRootRegex);
+  const siteRootMatch = removeXWalkPrefix(pathName).match(siteRootRegex);
   if (siteRootMatch) {
     return siteRootMatch[1];
   }
@@ -32,14 +32,14 @@ export function getSiteRootPath(pathName) {
  * @returns Site root path
  */
 export async function getSiteRootPathAlsoForSpeakerPath(pathName, hash) {
-  if (pathName.match(speakerPathRegex)) {
+  if (removeXWalkPrefix(pathName).match(speakerPathRegex)) {
     const yearHashMatch = hash?.match(yearHashRegex);
     let year;
     if (yearHashMatch) {
       [, year] = yearHashMatch;
     } else {
       const queryIndex = await getQueryIndex();
-      const speakerItem = queryIndex.getItem(pathName);
+      const speakerItem = queryIndex.getItem(removeXWalkPrefix(pathName));
       if (speakerItem) {
         const speakerTalks = queryIndex.getTalksForSpeaker(speakerItem);
         const latestTalk = speakerTalks[0];
