@@ -16,7 +16,7 @@ const yearHashRegex = /^#(\d\d\d\d)$/;
  * @returns {string} Site root path
  */
 export function getSiteRootPath(pathName) {
-  const [,pathNameWithoutPrefix] = splitXWalkPrefix(pathName)
+  const [, pathNameWithoutPrefix] = splitXWalkPrefix(pathName);
   const siteRootMatch = pathNameWithoutPrefix.match(siteRootRegex);
   if (siteRootMatch) {
     return siteRootMatch[1];
@@ -33,7 +33,7 @@ export function getSiteRootPath(pathName) {
  * @returns Site root path
  */
 export async function getSiteRootPathAlsoForSpeakerPath(pathName, hash) {
-  const [,pathNameWithoutPrefix] = splitXWalkPrefix(pathName);
+  const [, pathNameWithoutPrefix] = splitXWalkPrefix(pathName);
   if (pathNameWithoutPrefix.match(speakerPathRegex)) {
     const yearHashMatch = hash?.match(yearHashRegex);
     let year;
