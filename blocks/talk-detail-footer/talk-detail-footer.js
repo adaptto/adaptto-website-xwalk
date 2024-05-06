@@ -1,4 +1,5 @@
 import { append } from '../../scripts/utils/dom.js';
+import { externalizeXWalkPrefix } from '../../scripts/utils/path.js';
 import { getParentPath, getSchedulePath } from '../../scripts/utils/site.js';
 
 /**
@@ -12,7 +13,7 @@ export default async function decorate(block) {
   const schedulePath = getSchedulePath(document.location.pathname);
 
   const backLink = append(p, 'a');
-  backLink.href = parentPath;
+  backLink.href = externalizeXWalkPrefix(parentPath);
   if (parentPath === schedulePath) {
     backLink.textContent = 'Back to schedule';
   } else {

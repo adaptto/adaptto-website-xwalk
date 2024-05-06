@@ -20,7 +20,7 @@ function buildTalkTags(parent) {
   tags.forEach((tag) => {
     const li = append(ul, 'li');
     const a = append(li, 'a');
-    a.href = `${getArchivePath(document.location.pathname)}#tags=${encodeURIComponent(tag)}`;
+    a.href = `${externalizeXWalkPrefix(getArchivePath(document.location.pathname))}#tags=${encodeURIComponent(tag)}`;
     a.textContent = tag;
   });
 }

@@ -4,6 +4,7 @@ import { getQueryIndex } from '../../scripts/services/QueryIndex.js';
 import { parseCSVArray } from '../../scripts/utils/metadata.js';
 import { getSiteRootPath, getSpeakerDetailPath } from '../../scripts/utils/site.js';
 import { decorateAnchors } from '../../scripts/services/LinkHandler.js';
+import { externalizeXWalkPrefix } from '../../scripts/utils/path.js';
 
 /**
  * List talk speakers.
@@ -27,7 +28,7 @@ function buildSpeakers(parent, siteRootPath, queryIndex) {
     const speakerUrl = getSpeakerDetailPath(speakerItem, siteRootPath);
 
     const imageAnchor = append(li, 'a');
-    imageAnchor.href = speakerUrl;
+    imageAnchor.href = externalizeXWalkPrefix(speakerUrl);
     if (speakerItem.image) {
       imageAnchor.append(createOptimizedPicture(
         speakerItem.image,
@@ -42,7 +43,7 @@ function buildSpeakers(parent, siteRootPath, queryIndex) {
     }
 
     const a = append(li, 'a');
-    a.href = speakerUrl;
+    a.href = externalizeXWalkPrefix(speakerUrl);
     a.textContent = speakerItem.title;
 
     if (speakerItem.affiliation) {

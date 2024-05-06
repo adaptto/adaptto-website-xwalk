@@ -56,7 +56,7 @@ export default async function decorate(block) {
   // logo link
   const logoLink = document.querySelector('header a.logo');
   if (logoLink) {
-    logoLink.href = siteRoot;
+    logoLink.href = externalizeXWalkPrefix(siteRoot);
   }
 
   // fetch nav content
