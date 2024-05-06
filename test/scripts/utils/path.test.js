@@ -82,5 +82,10 @@ describe('utils/path', () => {
     expect(getYearFromPath('/2021/')).to.equal(2021);
     expect(getYearFromPath('/2021/mypage')).to.equal(2021);
     expect(getYearFromPath('/2021/mypage/mysubpage')).to.equal(2021);
+    // x-walk
+    expect(getYearFromPath('/content/adaptto/xwalk/')).to.undefined;
+    expect(getYearFromPath('/content/adaptto/xwalk/2021/')).to.equal(2021);
+    expect(getYearFromPath('/content/adaptto/xwalk/2021/mypage')).to.equal(2021);
+    expect(getYearFromPath('/content/adaptto/xwalk/2021/mypage/mysubpage')).to.equal(2021);
   });
 });
