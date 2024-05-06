@@ -3,6 +3,7 @@ import { getScheduleData } from '../../scripts/services/ScheduleData.js';
 import { formatDateFull, formatTime } from '../../scripts/utils/datetime.js';
 import { append } from '../../scripts/utils/dom.js';
 import { parseCSVArray } from '../../scripts/utils/metadata.js';
+import { externalizeXWalkPrefix } from '../../scripts/utils/path.js';
 import { getArchivePath, getSiteRootPath } from '../../scripts/utils/site.js';
 
 /**
@@ -19,7 +20,7 @@ function buildTalkTags(parent) {
   tags.forEach((tag) => {
     const li = append(ul, 'li');
     const a = append(li, 'a');
-    a.href = `${getArchivePath(document.location.pathname)}#tags=${encodeURIComponent(tag)}`;
+    a.href = `${externalizeXWalkPrefix(getArchivePath(document.location.pathname))}#tags=${encodeURIComponent(tag)}`;
     a.textContent = tag;
   });
 }
@@ -74,7 +75,7 @@ export default async function decorate(block) {
 
   // get schedule entry for talk
   const siteRoot = getSiteRootPath(document.location.pathname);
-  const scheduleData = await getScheduleData(`${siteRoot}schedule-data.json`);
+  const scheduleData = await getScheduleData(`${externalizeXWalkPrefix(siteRoot)}schedule-data.json`);
   const scheduleEntry = scheduleData.getTalkEntry(document.location.pathname);
 
   buildTalkTags(block);

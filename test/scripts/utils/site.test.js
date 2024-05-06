@@ -22,6 +22,11 @@ describe('utils/site', () => {
     expect(getSiteRootPath('/2021/')).to.equal('/2021/');
     expect(getSiteRootPath('/2021/mypage')).to.equal('/2021/');
     expect(getSiteRootPath('/2021/mypage/mysubpage')).to.equal('/2021/');
+    // x-walk
+    expect(getSiteRootPath('/content/adaptto/xwalk/')).to.equal('/');
+    expect(getSiteRootPath('/content/adaptto/xwalk/2021/')).to.equal('/2021/');
+    expect(getSiteRootPath('/content/adaptto/xwalk/2021/mypage')).to.equal('/2021/');
+    expect(getSiteRootPath('/content/adaptto/xwalk/2021/mypage/mysubpage')).to.equal('/2021/');
   });
 
   it('getSiteRootPathAlsoForSpeakerPath', async () => {
@@ -31,6 +36,13 @@ describe('utils/site', () => {
     expect(await getSiteRootPathAlsoForSpeakerPath('/2021/mypage/mysubpage')).to.equal('/2021/');
     expect(await getSiteRootPathAlsoForSpeakerPath('/speakers/konrad-windszus')).to.equal('/2021/');
     expect(await getSiteRootPathAlsoForSpeakerPath('/speakers/konrad-windszus', '#2019')).to.equal('/2019/');
+    // x-walk
+    expect(await getSiteRootPathAlsoForSpeakerPath('/content/adaptto/xwalk/')).to.equal('/');
+    expect(await getSiteRootPathAlsoForSpeakerPath('/content/adaptto/xwalk/2021/')).to.equal('/2021/');
+    expect(await getSiteRootPathAlsoForSpeakerPath('/content/adaptto/xwalk/2021/mypage')).to.equal('/2021/');
+    expect(await getSiteRootPathAlsoForSpeakerPath('/content/adaptto/xwalk/2021/mypage/mysubpage')).to.equal('/2021/');
+    expect(await getSiteRootPathAlsoForSpeakerPath('/content/adaptto/xwalk/speakers/konrad-windszus')).to.equal('/2021/');
+    expect(await getSiteRootPathAlsoForSpeakerPath('/content/adaptto/xwalk/speakers/konrad-windszus', '#2019')).to.equal('/2019/');
   });
 
   it('getParentPath', () => {

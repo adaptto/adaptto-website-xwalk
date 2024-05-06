@@ -3,6 +3,7 @@ import { getScheduleData } from '../../scripts/services/ScheduleData.js';
 import { getSiteRootPath } from '../../scripts/utils/site.js';
 import { formatDateFull, formatTime } from '../../scripts/utils/datetime.js';
 import { isFullscreen } from '../../scripts/utils/fullscreen.js';
+import { externalizeXWalkPrefix } from '../../scripts/utils/path.js';
 
 const dayIdPattern = /^#day-(\d)$/;
 
@@ -26,7 +27,7 @@ function getActiveDayFromHash() {
 async function getActiveDateFromCurrentDate() {
   // load schedule data
   const siteRoot = getSiteRootPath(document.location.pathname);
-  const scheduleData = await getScheduleData(`${siteRoot}schedule-data.json`, false);
+  const scheduleData = await getScheduleData(`${externalizeXWalkPrefix(siteRoot)}schedule-data.json`, false);
 
   const currentDate = new Date().toDateString();
   return scheduleData.getDays().filter((day) => day.start.toDateString() === currentDate)[0]?.day;
@@ -184,7 +185,7 @@ function buildDaySchedule(parent, day, activeDay) {
 async function renderSchedule(block, activeDay, forceReload) {
   // load schedule data
   const siteRoot = getSiteRootPath(document.location.pathname);
-  const scheduleData = await getScheduleData(`${siteRoot}schedule-data.json`, forceReload);
+  const scheduleData = await getScheduleData(`${externalizeXWalkPrefix(siteRoot)}schedule-data.json`, forceReload);
 
   // render schedule
   block.textContent = '';

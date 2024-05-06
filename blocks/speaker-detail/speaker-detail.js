@@ -2,7 +2,7 @@ import { getMetadata } from '../../scripts/aem.js';
 import { getQueryIndex } from '../../scripts/services/QueryIndex.js';
 import { append } from '../../scripts/utils/dom.js';
 import { buildTwitterHandle, buildTwitterUrl, removeTitleSuffix } from '../../scripts/utils/metadata.js';
-import { getYearFromPath } from '../../scripts/utils/path.js';
+import { externalizeXWalkPrefix, getYearFromPath } from '../../scripts/utils/path.js';
 import { getSiteRootPathAlsoForSpeakerPath, getSpeakerOverviewPath } from '../../scripts/utils/site.js';
 
 /**
@@ -51,7 +51,7 @@ function addTalkList(parent, talkItems, title) {
   talkItems.forEach((item) => {
     const li = append(ul, 'li');
     const a = append(li, 'a');
-    a.href = item.path;
+    a.href = externalizeXWalkPrefix(item.path);
     a.textContent = removeTitleSuffix(item.title);
     li.append(` (${getYearFromPath(item.path)})`);
   });

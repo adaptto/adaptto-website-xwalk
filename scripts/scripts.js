@@ -15,6 +15,7 @@ import {
 import { decorateAnchors } from './services/LinkHandler.js';
 import { append } from './utils/dom.js';
 import { isFullscreen } from './utils/fullscreen.js';
+import { externalizeXWalkPrefix } from './utils/path.js';
 import { getSiteRootPath, isSpeakerDetailPath } from './utils/site.js';
 import { decorateConsentManagement } from './utils/usercentrics.js';
 
@@ -98,7 +99,7 @@ function decorateTalkDetailPage(main) {
  */
 function buildFragmentBlock(fragmentRef) {
   const siteRootPath = getSiteRootPath(window.location.pathname);
-  const fragmentPath = `${siteRootPath}${fragmentRef}`;
+  const fragmentPath = externalizeXWalkPrefix(`${siteRootPath}${fragmentRef}`);
   const fragmentLink = document.createElement('a');
   fragmentLink.setAttribute('href', fragmentPath);
   fragmentLink.innerText = fragmentPath;
