@@ -2,6 +2,7 @@
   "mappings": [
     "/content/adaptto/xwalk/:/",
     "/content/adaptto/xwalk/metadata:/metadata.json",
+    "/content/adaptto/xwalk/query-index:/query-index.json",
     "/content/adaptto/xwalk/redirects:/redirects.json",
     "/content/adaptto/xwalk/_helix/config:/.helix/config.json",
     "/content/adaptto/xwalk/_helix/headers:/.helix/headers.json"
