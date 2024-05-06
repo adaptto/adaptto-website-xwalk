@@ -10,7 +10,11 @@
     "components": [
       "text",
       "image",
-      "title"
+      "title",
+      "embed-youtube",
+      "image-gallery",
+      "social-teaser",
+      "sponsor-teaser"
     ]
   }
 ]

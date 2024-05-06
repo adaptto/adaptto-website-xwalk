@@ -64,91 +64,6 @@
     ]
   },
   {
-    "id": "button",
-    "fields": [
-      {
-        "component": "aem-content",
-        "valueType": "string",
-        "name": "href",
-        "value": "",
-        "label": "Link"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "text",
-        "value": "",
-        "label": "Text"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "title",
-        "value": "",
-        "label": "Title"
-      },
-      {
-        "component": "select",
-        "name": "type",
-        "value": "",
-        "label": "Type",
-        "valueType": "string",
-        "options": [
-          {
-            "name": "default",
-            "value": ""
-          },
-          {
-            "name": "primary",
-            "value": "primary"
-          },
-          {
-            "name": "secondary",
-            "value": "secondary"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "columns",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "number",
-        "name": "columns",
-        "value": "",
-        "label": "Columns"
-      },
-      {
-        "component": "text",
-        "valueType": "number",
-        "name": "rows",
-        "value": "",
-        "label": "Rows"
-      }
-    ]
-  },
-  {
-    "id": "card",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
     "id": "section",
     "fields": [
       {
@@ -161,28 +76,14 @@
     ]
   },
   {
-    "id": "hero",
+    "id": "embed-youtube",
     "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
       {
         "component": "text",
         "valueType": "string",
-        "name": "imageAlt",
-        "label": "Alt",
-        "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "text",
+        "name": "link",
         "value": "",
-        "label": "Text",
-        "valueType": "string"
+        "label": "YouTube Video URL"
       }
     ]
   }
