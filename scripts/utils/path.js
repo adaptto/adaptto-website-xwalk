@@ -1,5 +1,6 @@
 const urlPathRegex = /^(https?:\/\/[^/]+)?\/.*$/;
 const yearPathRegex = /^\/(\d\d\d\d)\/(.+)?$/;
+const xwalkPrefix = '/content/adaptto/xwalk'
 
 /**
  * Checks if the given value is a path.
@@ -81,7 +82,8 @@ export function getDocumentName(value) {
  * @returns {number} Year or undefined
  */
 export function getYearFromPath(pathName) {
-  const yearPathMatch = removeXWalkPrefix(pathName).match(yearPathRegex);
+  const [,pathNameWithoutPrefix] = splitXWalkPrefix(pathName)
+  const yearPathMatch = pathNameWithoutPrefix.match(yearPathRegex);
   if (yearPathMatch) {
     return parseInt(yearPathMatch[1], 10);
   }
@@ -91,12 +93,22 @@ export function getYearFromPath(pathName) {
 /**
  * Remove /content/... prefix that may be present in author environment.
  * @param {string} pathName Path name.
- * @returns {string} Path name without /content/... prefix.
+ * @returns {string[]} Array with two element: prefix (may be empty string) and path without prefix.
  */
-export function removeXWalkPrefix(pathName) {
-  const prefix = '/content/adaptto/xwalk'
-  if (pathName.startsWith(prefix)) {
-    return pathName.substring(prefix.length);
+export function splitXWalkPrefix(pathName) {  
+  if (pathName.startsWith(xwalkPrefix)) {
+    return [xwalkPrefix,pathName.substring(xwalkPrefix.length)];
   }
-  return pathName
+  return ['',pathName]
+}
+
+/**
+ * Externalizes URL path by adding X-Walk prefix if current location has X-Walk prefix.
+ * @param {string} pathName Path name with our withour X-Walk prefix.
+ * @returns Path name with X-Walk prefix if current location has X-Walk prefix.
+ */
+export function externalizeXWalkPrefix(pathName) {
+  const [prefix] = splitXWalkPrefix(document.location.pathname);
+  const [,pathNameWithoutPrefix] = splitXWalkPrefix(pathName);
+  return prefix + pathNameWithoutPrefix;
 }

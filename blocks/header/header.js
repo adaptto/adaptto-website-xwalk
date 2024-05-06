@@ -2,6 +2,7 @@ import { append, prepend } from '../../scripts/utils/dom.js';
 import { addArchiveLinks, getSiteRootPathAlsoForSpeakerPath } from '../../scripts/utils/site.js';
 import { decorateAnchors } from '../../scripts/services/LinkHandler.js';
 import { getFetchCacheOptions } from '../../scripts/utils/fetch.js';
+import { externalizeXWalkPrefix } from '../../scripts/utils/path.js';
 
 /**
  * @param {Element} nav
@@ -59,7 +60,7 @@ export default async function decorate(block) {
   }
 
   // fetch nav content
-  const resp = await fetch(`${siteRoot}nav.plain.html`, getFetchCacheOptions());
+  const resp = await fetch(`${externalizeXWalkPrefix(siteRoot)}nav.plain.html`, getFetchCacheOptions());
   if (resp.ok) {
     const html = await resp.text();
     const container = document.createElement('div');

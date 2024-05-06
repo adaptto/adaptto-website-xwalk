@@ -42,7 +42,7 @@ describe('utils/site', () => {
     expect(await getSiteRootPathAlsoForSpeakerPath('/content/adaptto/xwalk/2021/mypage')).to.equal('/2021/');
     expect(await getSiteRootPathAlsoForSpeakerPath('/content/adaptto/xwalk/2021/mypage/mysubpage')).to.equal('/2021/');
     expect(await getSiteRootPathAlsoForSpeakerPath('/content/adaptto/xwalk/speakers/konrad-windszus')).to.equal('/2021/');
-    //expect(await getSiteRootPathAlsoForSpeakerPath('/content/adaptto/xwalk/speakers/konrad-windszus', '#2019')).to.equal('/2019/');
+    expect(await getSiteRootPathAlsoForSpeakerPath('/content/adaptto/xwalk/speakers/konrad-windszus', '#2019')).to.equal('/2019/');
   });
 
   it('getParentPath', () => {
