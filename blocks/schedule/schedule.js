@@ -93,7 +93,7 @@ function buildDayEntryCells(tr, entry, colSpan, speakerColumn) {
   }
   if (entry.talkPath) {
     const link = append(tdTitle, 'a');
-    link.href = entry.talkPath;
+    link.href = externalizeXWalkPrefix(entry.talkPath);
     link.textContent = entry.title;
   } else {
     tdTitle.textContent = entry.title;
