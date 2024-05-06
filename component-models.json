@@ -81,7 +81,7 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "link",
+        "name": "videoUrl",
         "value": "",
         "label": "YouTube Video URL"
       }
