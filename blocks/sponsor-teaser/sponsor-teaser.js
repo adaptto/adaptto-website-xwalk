@@ -5,8 +5,8 @@
 export default async function decorate(block) {
   // put link around image if no anchor around image present in markup
   block.querySelectorAll('div').forEach((div) => {
-    const img = div.querySelector('p > picture');
-    const link = div.querySelector('p a');
+    const img = div.querySelector('p > picture, div > picture');
+    const link = div.querySelector('p a, div a');
     if (img && link) {
       const imgContainer = img.parentElement;
       const imgAnchor = document.createElement('a');
