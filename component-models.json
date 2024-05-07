@@ -144,6 +144,33 @@
         "name": "text",
         "value": "",
         "label": "Teaser Text"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "fileReference",
+        "label": "Image",
+        "description": "Sponsor Logo",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "sponsorLink",
+        "value": "",
+        "label": "Sponsor URL"
+      }
+    ]
+  },
+  {
+    "id": "sponsor-teaser",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "text",
+        "value": "",
+        "label": "Teaser Text"
       }
     ]
   }

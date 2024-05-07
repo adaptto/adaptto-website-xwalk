@@ -13,9 +13,9 @@
       "title",
       "embed-youtube",
       "image-gallery",
+      "stage-header",
       "social-teaser",
-      "sponsor-teaser",
-      "stage-header"
+      "sponsor-teaser-list"
     ]
   }
 ]

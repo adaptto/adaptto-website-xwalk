@@ -95,6 +95,21 @@
           }
         },
         {
+          "title": "Stage Header",
+          "id": "stage-header",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Stage Header",
+                  "model": "stage-header"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Social Teaser",
           "id": "social-teaser",
           "plugins": {
@@ -110,30 +125,30 @@
           }
         },
         {
-          "title": "Sponsor Teaser",
-          "id": "sponsor-teaser",
+          "title": "Sponsor Teaser List",
+          "id": "sponsor-teaser-list",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
-                  "name": "Sponsor Teaser",
-                  "model": "sponsor-teaser"
+                  "name": "Sponsor Teaser List",
+                  "filter": "sponsor-teaser"
                 }
               }
             }
           }
         },
         {
-          "title": "Stage Header",
-          "id": "stage-header",
+          "title": "Sponsor Teaser",
+          "id": "sponsor-teaser",
           "plugins": {
             "xwalk": {
               "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
+                "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
-                  "name": "Stage Header",
-                  "model": "stage-header"
+                  "name": "Sponsor Teaser",
+                  "model": "sponsor-teaser"
                 }
               }
             }
