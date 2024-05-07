@@ -148,7 +148,7 @@
     ]
   },
   {
-    "id": "sponsor-teaser",
+    "id": "sponsor-teaser-item",
     "fields": [
       {
         "component": "richtext",
