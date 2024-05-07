@@ -26,4 +26,13 @@ export default async function decorate(block) {
       imgContainer.append(imgAnchor);
     }
   });
+
+  // introduce additional wrapped div for every div to comply with markup generated
+  // from documents-based authoring
+  block.querySelectorAll(':scope > div').forEach((div) => {
+    const parent = div.parentElement;
+    const wrapperDiv = document.createElement('div');
+    parent.append(wrapperDiv);
+    wrapperDiv.append(div);
+  });
 }
