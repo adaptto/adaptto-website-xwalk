@@ -1,4 +1,4 @@
-const adaptToSiteUrlRegex = /^https?:\/\/([^/.]+--adaptto-website(-xwalk)?--adaptto.(hlx|aem).(page|live)|adapt.to|localhost:\d+)(\/.+)$/;
+const adaptToSiteUrlRegex = /^https?:\/\/([^/.]+--adaptto-website(-xwalk)?--adaptto\.(hlx|aem)\.(page|live)|adapt\.to|localhost:\d+|.+\.adobeaemcloud\.com\/content\/adaptto\/xwalk)(\/.+)$/;
 const adaptToSiteUrlPathnameGroup = 5;
 const downloadUrlRegex = /^.+\.(pdf|zip)$/;
 
