@@ -147,6 +147,7 @@
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
+                  "name": "Sponsor Teaser Item",
                   "model": "sponsor-teaser-item"
                 }
               }
