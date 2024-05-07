@@ -17,5 +17,11 @@
       "social-teaser",
       "sponsor-teaser-list"
     ]
+  },
+  {
+    "id": "sponsor-teaser-list",
+    "components": [
+      "sponsor-teaser"
+    ]
   }
 ]
