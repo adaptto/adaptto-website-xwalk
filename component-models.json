@@ -144,6 +144,18 @@
         "name": "text",
         "value": "",
         "label": "Teaser Text"
+      }
+    ]
+  },
+  {
+    "id": "sponsor-teaser",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "text",
+        "value": "",
+        "label": "Teaser Text"
       },
       {
         "component": "reference",
@@ -159,18 +171,6 @@
         "name": "sponsorLink",
         "value": "",
         "label": "Sponsor URL"
-      }
-    ]
-  },
-  {
-    "id": "sponsor-teaser",
-    "fields": [
-      {
-        "component": "richtext",
-        "valueType": "string",
-        "name": "text",
-        "value": "",
-        "label": "Teaser Text"
       }
     ]
   }
