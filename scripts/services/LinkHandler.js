@@ -30,7 +30,7 @@ export function decorateAnchor(a) {
   if (url) {
     const link = new Link(url);
     if (link.isAdaptToSiteUrl()) {
-      a.href = link.getAdaptToSiteUrlPath();
+      a.href = externalizeXWalkPrefix(link.getAdaptToSiteUrlPath());
       if (link.isDownload()) {
         a.setAttribute('download', '');
       }
