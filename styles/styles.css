@@ -107,6 +107,10 @@ li {
   line-height: 1.6em;
 }
 
+li > p {
+  margin: 0;
+}
+
 ul {
   padding-left: calc(2 * var(--base-unit));
 }
