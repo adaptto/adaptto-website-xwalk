@@ -95,6 +95,21 @@
           }
         },
         {
+          "title": "Stage Header",
+          "id": "stage-header",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Stage Header",
+                  "model": "stage-header"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Social Teaser",
           "id": "social-teaser",
           "plugins": {
@@ -118,22 +133,52 @@
                 "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
                   "name": "Sponsor Teaser",
-                  "model": "sponsor-teaser"
+                  "filter": "sponsor-teaser-item"
                 }
               }
             }
           }
         },
         {
-          "title": "Stage Header",
-          "id": "stage-header",
+          "title": "Sponsor Teaser Item",
+          "id": "sponsor-teaser-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Sponsor Teaser Item",
+                  "model": "sponsor-teaser-item"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Teaser Bar",
+          "id": "teaser-bar",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
-                  "name": "Stage Header",
-                  "model": "stage-header"
+                  "name": "Teaser Bar",
+                  "filter": "teaser-bar-item"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Teaser Bar Item",
+          "id": "teaser-bar-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Teaser Bar Item",
+                  "model": "teaser-bar-item"
                 }
               }
             }
