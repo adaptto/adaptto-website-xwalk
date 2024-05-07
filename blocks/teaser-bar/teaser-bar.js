@@ -3,7 +3,7 @@
  * @param {Element} block
  */
 export default async function decorate(block) {
-  block.querySelectorAll('div > p').forEach((p) => {
+  block.querySelectorAll('div > p, div > div').forEach((p) => {
     if (p.querySelector('img')) {
       p.classList.add('image');
     } else if (p.querySelector('a')) {
