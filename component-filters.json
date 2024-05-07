@@ -15,13 +15,20 @@
       "image-gallery",
       "stage-header",
       "social-teaser",
-      "sponsor-teaser"
+      "sponsor-teaser",
+      "teaser-bar"
     ]
   },
   {
     "id": "sponsor-teaser",
     "components": [
       "sponsor-teaser-item"
+    ]
+  },
+  {
+    "id": "teaser-bar",
+    "components": [
+      "teaser-bar-item"
     ]
   }
 ]
