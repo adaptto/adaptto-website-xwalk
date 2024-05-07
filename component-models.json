@@ -134,5 +134,17 @@
         "label": "Second CTA Link"
       }
     ]
+  },
+  {
+    "id": "social-teaser",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "text",
+        "value": "",
+        "label": "Teaser Text"
+      }
+    ]
   }
 ]
