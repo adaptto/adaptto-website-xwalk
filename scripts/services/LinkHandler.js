@@ -1,3 +1,4 @@
+import { externalizeXWalkPrefix } from '../utils/path.js';
 import Link from './Link.js';
 
 /**
@@ -10,7 +11,7 @@ export function rewriteUrl(url) {
   if (url) {
     const link = new Link(url);
     if (link.isAdaptToSiteUrl()) {
-      return link.getAdaptToSiteUrlPath();
+      return externalizeXWalkPrefix(link.getAdaptToSiteUrlPath());
     }
   }
   return url;
