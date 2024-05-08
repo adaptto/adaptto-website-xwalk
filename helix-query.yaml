@@ -23,27 +23,27 @@ indices:
         value: |
           attribute(el, 'content')
       affiliation:
-        select: head > meta[property="affiliation"]
+        select: head > meta[name="affiliation"]
         value: |
           attribute(el, 'content')
       twitter:
-        select: head > meta[property="twitter"]
+        select: head > meta[name="twitter"]
         value: |
           attribute(el, 'content')
       speaker-alias:
-        select: head > meta[property="speaker-alias"]
+        select: head > meta[name="speaker-alias"]
         value: |
           attribute(el, 'content')
       uptoyear:
-        select: head > meta[property="uptoyear"]
+        select: head > meta[name="uptoyear"]
         value: |
           attribute(el, 'content')
       speakers:
-        select: head > meta[property="speakers"]
+        select: head > meta[name="speakers"]
         value: |
           attribute(el, 'content')
       tags:
-        select: head > meta[property="article:tag"]
+        select: head > meta[name="cq-tags"]
         value: |
           attribute(el, 'content')
       lastModified:
