@@ -178,7 +178,8 @@
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
                   "name": "Teaser Bar Item",
-                  "model": "teaser-bar-item"
+                  "model": "teaser-bar-item",
+                  "title": "New Item"
                 }
               }
             }

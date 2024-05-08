@@ -1,3 +1,7 @@
+.sponsor-teaser > div {
+  min-height: 100px;
+}
+
 .sponsor-teaser img {
   object-fit: contain;
   max-width: 80%;

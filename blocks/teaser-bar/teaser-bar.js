@@ -3,12 +3,12 @@
  * @param {Element} block
  */
 export default async function decorate(block) {
-  block.querySelectorAll('div > p, div > div').forEach((p) => {
+  block.querySelectorAll('div > p, :scope > div > div').forEach((p) => {
     if (p.querySelector('img')) {
       p.classList.add('image');
     } else if (p.querySelector('a')) {
       p.classList.add('link');
-    } else {
+    } else if (!p.querySelector('h1')) {
       p.classList.add('text');
     }
   });
