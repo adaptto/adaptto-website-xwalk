@@ -188,6 +188,7 @@
         "component": "text",
         "valueType": "string",
         "name": "titleType",
+        "value": "h1",
         "hidden": true
       },
       {
