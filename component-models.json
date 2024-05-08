@@ -193,12 +193,11 @@
         "multi": false
       },
       {
-        "component": "text",
+        "component": "richtext",
         "valueType": "string",
         "name": "text",
         "value": "",
-        "label": "Teaser Text",
-        "multi": true
+        "label": "Teaser Text"
       },
       {
         "component": "text",
