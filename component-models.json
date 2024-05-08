@@ -59,6 +59,16 @@
         "component": "text",
         "name": "image",
         "label": "Talk YouTube Video Preview Image"
+      },
+      {
+        "component": "text",
+        "name": "include-teaser-bar",
+        "label": "Include Teaser Bar"
+      },
+      {
+        "component": "text",
+        "name": "include-aside-bar",
+        "label": "Include Aside Bar"
       }
     ]
   },
