@@ -37,32 +37,27 @@
       {
         "component": "text",
         "name": "speakers",
-        "label": "Talk Speakers",
-        "description": "Talk Speakers"
+        "label": "Talk Speakers"
       },
       {
         "component": "text",
         "name": "presentation",
-        "label": "Talk Presentation",
-        "description": "Presentation download link"
+        "label": "Talk Presentation Link"
       },
       {
         "component": "text",
         "name": "source-code",
-        "label": "Talk Source Code",
-        "description": "Source Code Link"
+        "label": "Talk Source Code Link"
       },
       {
         "component": "text",
         "name": "video",
-        "label": "Talk Video",
-        "description": "YouTube Video URL"
+        "label": "Talk YouTube Video URL"
       },
       {
         "component": "text",
         "name": "image",
-        "label": "Talk Image",
-        "description": "YouTube Video Preview Image"
+        "label": "Talk YouTube Video Preview Image"
       }
     ]
   },
