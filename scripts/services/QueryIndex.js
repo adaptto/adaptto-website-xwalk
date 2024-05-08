@@ -177,7 +177,7 @@ export async function getQueryIndex() {
     queryIndexInstancePromise = new Promise(async (resolve, reject) => {
       try {
         let data;
-        const resp = await fetch('/query-index.json', getFetchCacheOptions());
+        const resp = await fetch(`${window.hlx?.codeBasePath ?? ''}/query-index.json`, getFetchCacheOptions());
         if (resp.ok) {
           const json = await resp.json();
           data = json.data;
