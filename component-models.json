@@ -1,5 +1,16 @@
 [
   {
+    "id": "page-metadata",
+    "fields": [
+      {
+        "component": "text",
+        "name": "affiliation",
+        "label": "Affiliation",
+        "description": "Speaker Affiliation"
+      }
+    ]
+  },
+  {
     "id": "title",
     "fields": [
       {
