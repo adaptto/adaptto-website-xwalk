@@ -1,0 +1,52 @@
+version: 1
+
+indices:
+  all:
+    include:
+      - '/**'
+    target: /query-index.json
+    properties:
+      title:
+        select: head > meta[property="og:title"]
+        value: |
+          attribute(el, 'content')
+      keywords:
+        select: head > meta[property="keywords"]
+        value: |
+          attribute(el, 'content')
+      description:
+        select: head > meta[property="og:description"]
+        value: |
+          attribute(el, 'content')
+      image:
+        select: head > meta[property="og:image"]
+        value: |
+          attribute(el, 'content')
+      affiliation:
+        select: head > meta[property="affiliation"]
+        value: |
+          attribute(el, 'content')
+      twitter:
+        select: head > meta[property="twitter"]
+        value: |
+          attribute(el, 'content')
+      speaker-alias:
+        select: head > meta[property="speaker-alias"]
+        value: |
+          attribute(el, 'content')
+      uptoyear:
+        select: head > meta[property="uptoyear"]
+        value: |
+          attribute(el, 'content')
+      speakers:
+        select: head > meta[property="speakers"]
+        value: |
+          attribute(el, 'content')
+      tags:
+        select: head > meta[property="article:tag"]
+        value: |
+          attribute(el, 'content')
+      lastModified:
+        select: none
+        value: |
+          parseTimestamp(headers['last-modified'], 'ddd, DD MMM YYYY hh:mm:ss GMT')
