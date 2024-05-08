@@ -96,7 +96,8 @@ export function splitXWalkPrefix(pathName) {
 export function externalizeXWalkPrefix(pathName) {
   const [prefix] = splitXWalkPrefix(document.location.pathname);
   const [, pathNameWithoutPrefix] = splitXWalkPrefix(pathName);
-  return prefix + pathNameWithoutPrefix;
+  const suffix = prefix != '' && pathNameWithoutPrefix.endsWith('/') ? 'index' : ''
+  return prefix + pathNameWithoutPrefix + suffix;
 }
 
 /**
