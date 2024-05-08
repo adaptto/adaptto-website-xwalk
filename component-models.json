@@ -43,7 +43,8 @@
         "component": "reference",
         "valueType": "string",
         "name": "presentation",
-        "label": "Talk Presentation Link"
+        "label": "Talk Presentation Link",
+        "multi": false
       },
       {
         "component": "text",
@@ -304,6 +305,18 @@
         "name": "speakers",
         "value": "",
         "label": "Speakers"
+      }
+    ]
+  },
+  {
+    "id": "image-gallery",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": true
       }
     ]
   }
