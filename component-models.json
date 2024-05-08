@@ -185,6 +185,12 @@
         "label": "Title"
       },
       {
+        "component": "text",
+        "valueType": "string",
+        "name": "titleType",
+        "hidden": true
+      },
+      {
         "component": "reference",
         "valueType": "string",
         "name": "fileReference",

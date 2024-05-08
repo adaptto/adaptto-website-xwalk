@@ -179,6 +179,7 @@
                 "template": {
                   "name": "Teaser Bar Item",
                   "model": "teaser-bar-item",
+                  "title": "New Item",
                   "titleType": "h1"
                 }
               }
