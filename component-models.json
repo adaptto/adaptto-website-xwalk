@@ -185,23 +185,6 @@
         "label": "Title"
       },
       {
-        "component": "select",
-        "name": "titleType",
-        "value": "h1",
-        "label": "Title Type",
-        "valueType": "string",
-        "options": [
-          {
-            "name": "h1",
-            "value": "h1"
-          },
-          {
-            "name": "h2",
-            "value": "h2"
-          }
-        ]
-      },
-      {
         "component": "reference",
         "valueType": "string",
         "name": "fileReference",
