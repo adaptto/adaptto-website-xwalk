@@ -1,5 +1,104 @@
 [
   {
+    "id": "page-metadata",
+    "fields": [
+      {
+        "component": "text",
+        "name": "affiliation",
+        "label": "Affiliation",
+        "description": "Speaker Affiliation"
+      },
+      {
+        "component": "text",
+        "name": "twitter",
+        "label": "Twitter",
+        "description": "Speaker Twitter Handle"
+      },
+      {
+        "component": "text",
+        "name": "speaker-alias",
+        "label": "Speaker Alias",
+        "description": "Speaker Alias"
+      },
+      {
+        "component": "text",
+        "name": "uptoyear",
+        "label": "Up To Year",
+        "description": "Speaker profile valid up to this year"
+      },
+      {
+        "component": "text",
+        "name": "speakers",
+        "label": "Speakers",
+        "description": "Talk Speakers"
+      }
+    ]
+  },
+  {
+    "id": "speaker-metadata",
+    "fields": [
+      {
+        "component": "text",
+        "name": "affiliation",
+        "label": "Affiliation",
+        "description": "Speaker Affiliation"
+      },
+      {
+        "component": "text",
+        "name": "twitter",
+        "label": "Twitter",
+        "description": "Speaker Twitter Handle"
+      },
+      {
+        "component": "text",
+        "name": "speaker-alias",
+        "label": "Speaker Alias",
+        "description": "Speaker Alias"
+      },
+      {
+        "component": "text",
+        "name": "uptoyear",
+        "label": "Up To Year",
+        "description": "Speaker profile valid up to this year"
+      }
+    ]
+  },
+  {
+    "id": "talk-metadata",
+    "fields": [
+      {
+        "component": "text",
+        "name": "speakers",
+        "label": "Speakers",
+        "description": "Talk Speakers"
+      },
+      {
+        "component": "text",
+        "name": "presentation",
+        "label": "Presentation",
+        "description": "Presentation download link"
+      },
+      {
+        "component": "text",
+        "name": "source-code",
+        "label": "Source Code",
+        "description": "Source Code Link"
+      },
+      {
+        "component": "text",
+        "name": "video",
+        "label": "Video",
+        "description": "YouTube Video URL"
+      },
+      {
+        "component": "text",
+        "name": "image",
+        "label": "Image",
+        "description": "YouTube Video Preview Image"
+      }
+    ]
+  },
+  {
     "id": "title",
     "fields": [
       {

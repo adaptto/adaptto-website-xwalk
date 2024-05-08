@@ -130,7 +130,8 @@ export function getSpeakerDetailPath(speakerItem, pathName) {
  * @returns true if path points to a speaker detail page
  */
 export function isSpeakerDetailPath(pathName) {
-  return pathName.match(speakerPathRegex) != null;
+  const [, pathNameWithoutPrefix] = splitXWalkPrefix(pathName);
+  return pathNameWithoutPrefix.match(speakerPathRegex) != null;
 }
 
 /**
