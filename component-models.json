@@ -193,11 +193,12 @@
         "multi": false
       },
       {
-        "component": "text-area",
+        "component": "text",
         "valueType": "string",
         "name": "text",
         "value": "",
-        "label": "Teaser Text"
+        "label": "Teaser Text",
+        "multi": true
       },
       {
         "component": "text",
