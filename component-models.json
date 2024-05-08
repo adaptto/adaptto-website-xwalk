@@ -3,6 +3,11 @@
     "id": "page-metadata",
     "fields": [
       {
+        "component": "tab",
+        "label": "Speaker",
+        "name": "speaker-metadata"
+      },
+      {
         "component": "text",
         "name": "affiliation",
         "label": "Affiliation",
@@ -27,45 +32,10 @@
         "description": "Speaker profile valid up to this year"
       },
       {
-        "component": "text",
-        "name": "speakers",
-        "label": "Speakers",
-        "description": "Talk Speakers"
-      }
-    ]
-  },
-  {
-    "id": "speaker-metadata",
-    "fields": [
-      {
-        "component": "text",
-        "name": "affiliation",
-        "label": "Affiliation",
-        "description": "Speaker Affiliation"
+        "component": "tab",
+        "label": "Talk",
+        "name": "talk-metadata"
       },
-      {
-        "component": "text",
-        "name": "twitter",
-        "label": "Twitter",
-        "description": "Speaker Twitter Handle"
-      },
-      {
-        "component": "text",
-        "name": "speaker-alias",
-        "label": "Speaker Alias",
-        "description": "Speaker Alias"
-      },
-      {
-        "component": "text",
-        "name": "uptoyear",
-        "label": "Up To Year",
-        "description": "Speaker profile valid up to this year"
-      }
-    ]
-  },
-  {
-    "id": "talk-metadata",
-    "fields": [
       {
         "component": "text",
         "name": "speakers",
