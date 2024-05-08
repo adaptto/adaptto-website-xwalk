@@ -40,7 +40,8 @@
         "label": "Talk Speakers"
       },
       {
-        "component": "text",
+        "component": "reference",
+        "valueType": "string",
         "name": "presentation",
         "label": "Talk Presentation Link"
       },
