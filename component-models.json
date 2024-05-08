@@ -193,7 +193,7 @@
         "multi": false
       },
       {
-        "component": "richtext",
+        "component": "text-area",
         "valueType": "string",
         "name": "text",
         "value": "",
