@@ -294,5 +294,17 @@
         "label": "CTA Link"
       }
     ]
+  },
+  {
+    "id": "speaker-gallery",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "speakers",
+        "value": "",
+        "label": "Speakers"
+      }
+    ]
   }
 ]
