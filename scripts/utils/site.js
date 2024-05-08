@@ -150,7 +150,8 @@ export async function addArchiveLinks(nav) {
     queryIndex.getAllSiteRoots().forEach((siteRoot) => {
       const listItem = append(ul, 'li');
       const link = append(listItem, 'a');
-      link.href = externalizeXWalkPrefix(siteRoot.path);
+      const [prefix] = splitXWalkPrefix(document.location.pathname);
+      link.href = externalizeXWalkPrefix(siteRoot.path) + (prefix != '' ? 'index' : '');
       link.textContent = siteRoot.title;
     });
   }
