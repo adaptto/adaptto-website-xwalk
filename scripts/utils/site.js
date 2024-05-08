@@ -151,7 +151,7 @@ export async function addArchiveLinks(nav) {
       const listItem = append(ul, 'li');
       const link = append(listItem, 'a');
       const [prefix] = splitXWalkPrefix(document.location.pathname);
-      link.href = externalizeXWalkPrefix(siteRoot.path) + (prefix != '' ? 'index' : '');
+      link.href = externalizeXWalkPrefix(siteRoot.path) + (prefix != '' ? 'index.html' : '');
       link.textContent = siteRoot.title;
     });
   }
