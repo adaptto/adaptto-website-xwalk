@@ -319,5 +319,9 @@
         "multi": true
       }
     ]
+  },
+  {
+    "id": "schedule",
+    "fields": []
   }
 ]
