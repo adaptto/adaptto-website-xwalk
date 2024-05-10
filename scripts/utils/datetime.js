@@ -35,7 +35,7 @@ export function convertSheetDateValue(value) {
 
 export function convertStringDateValue(value) {
   const result = Date.parse(value);
-  if (isNaN(result)) {
+  if (isNaN(result)) { // eslint-disable-line no-restricted-globals
     return new Date(0);
   }
   const date = new Date(0);

@@ -69,8 +69,8 @@ function getTalkQueryIndexItem(talkDetailRef, year, queryIndex) {
 function toEntry(item, queryIndex) {
   const day = parseInt(item.Day, 10) || 0;
   const track = parseInt(item.Track, 10) || 0;
-  const startTime = new Number(item.Start);
-  const endTime = new Number(item.End);
+  const startTime = new Number(item.Start); // eslint-disable-line no-new-wrappers
+  const endTime = new Number(item.End); // eslint-disable-line no-new-wrappers
   let title = item.Entry;
   const duration = parseInt(item.Duration, 10) || 0;
   const durationFAQ = parseInt(item.FAQ, 10) || 0;
@@ -84,8 +84,10 @@ function toEntry(item, queryIndex) {
   }
 
   // convert dates
-  const start = isNaN(startTime) ? convertStringDateValue(item.Start) : convertSheetDateValue(startTime);
-  const end = isNaN(endTime) ? convertStringDateValue(item.End) : convertSheetDateValue(endTime);
+  const start = isNaN(startTime) // eslint-disable-line no-restricted-globals
+    ? convertStringDateValue(item.Start) : convertSheetDateValue(startTime);
+  const end = isNaN(endTime) // eslint-disable-line no-restricted-globals
+    ? convertStringDateValue(item.End) : convertSheetDateValue(endTime);
 
   // resolve talk path and title, speakers from query index
   let talkPath;
