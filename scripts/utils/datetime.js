@@ -32,3 +32,13 @@ export function convertSheetDateValue(value) {
   date.setUTCMilliseconds(Math.round((value - 25569) * 86400 * 1000));
   return date;
 }
+
+export function convertStringDateValue(value) {
+  const result = Date.parse(value);
+  if (isNaN(result)) {
+    return new Date(0);
+  }
+  const date = new Date(0);
+  date.setTime(result);
+  return date;
+}
