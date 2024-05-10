@@ -5,6 +5,8 @@
     "/content/adaptto/xwalk/query-index:/query-index.json",
     "/content/adaptto/xwalk/redirects:/redirects.json",
     "/content/adaptto/xwalk/_helix/config:/.helix/config.json",
-    "/content/adaptto/xwalk/_helix/headers:/.helix/headers.json"
+    "/content/adaptto/xwalk/_helix/headers:/.helix/headers.json",
+    "/content/adaptto/xwalk/2023/schedule-data:/2023/schedule-data.json",
+    "/content/adaptto/xwalk/2024/schedule-data:/2023/schedule-data.json"
   ]
 }
