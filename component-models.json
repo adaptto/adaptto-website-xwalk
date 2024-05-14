@@ -309,14 +309,14 @@
     ]
   },
   {
-    "id": "image-gallery",
+    "id": "image-gallery-item",
     "fields": [
       {
         "component": "reference",
         "valueType": "string",
         "name": "image",
         "label": "Image",
-        "multi": true
+        "multi": false
       }
     ]
   },
