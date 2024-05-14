@@ -100,6 +100,27 @@ export function externalizeXWalkPrefix(pathName) {
 }
 
 /**
+ * Externalizes URL path by adding X-Walk prefix if current location has X-Walk prefix
+ * and - if in author environment - adding html extension.
+ * @param {string} pathName Path name with our withour X-Walk prefix.
+ * @returns Path name with X-Walk prefix if current location has X-Walk prefix, and .html extension.
+ */
+export function externalizeXWalkPrefixLink(pathName) {
+  const externalized = externalizeXWalkPrefix(pathName);
+  if (externalized.startsWith(xwalkPrefix)) {
+    const url = new URL(externalized, window.location);
+    if (url.pathname.endsWith('/')) {
+      url.pathname = `${url.pathname}index.html`;
+    }
+    if (!url.pathname.endsWith('.html')) {
+      url.pathname = `${url.pathname}.html`;
+    }
+    return url.toString();
+  }
+  return externalized;
+}
+
+/**
  * Gets year from given path.
  * @param {string} pathName Path name.
  * @returns {number} Year or undefined

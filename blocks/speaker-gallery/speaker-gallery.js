@@ -2,7 +2,7 @@ import { createOptimizedPicture, readBlockConfig } from '../../scripts/aem.js';
 import { getQueryIndex } from '../../scripts/services/QueryIndex.js';
 import { append } from '../../scripts/utils/dom.js';
 import { buildTwitterHandle, buildTwitterUrl, parseCSVArray } from '../../scripts/utils/metadata.js';
-import { externalizeXWalkPrefix } from '../../scripts/utils/path.js';
+import { externalizeXWalkPrefixLink } from '../../scripts/utils/path.js';
 import { getSiteRootPath, getSpeakerDetailPath } from '../../scripts/utils/site.js';
 
 /**
@@ -48,13 +48,13 @@ function addSpeaker(parent, speaker, speakerIndex, siteRootPath, queryIndex) {
   const div = append(parent, 'div', 'speaker');
 
   const imageAnchor = append(div, 'a');
-  imageAnchor.href = externalizeXWalkPrefix(speakerUrl);
+  imageAnchor.href = externalizeXWalkPrefixLink(speakerUrl);
   const eagerImage = (speakerIndex <= 3); // use eager loading for first 4 speaker images
   imageAnchor.append(createSpeakerImage(speakerItem, eagerImage));
 
   const nameDiv = append(div, 'div', 'name');
   const a = append(nameDiv, 'a');
-  a.href = externalizeXWalkPrefix(speakerUrl);
+  a.href = externalizeXWalkPrefixLink(speakerUrl);
   a.textContent = speakerItem.title;
 
   if (speakerItem.twitter) {

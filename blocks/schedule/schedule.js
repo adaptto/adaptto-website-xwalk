@@ -3,7 +3,7 @@ import { getScheduleData } from '../../scripts/services/ScheduleData.js';
 import { getSiteRootPath } from '../../scripts/utils/site.js';
 import { formatDateFull, formatTime } from '../../scripts/utils/datetime.js';
 import { isFullscreen } from '../../scripts/utils/fullscreen.js';
-import { externalizeXWalkPrefix } from '../../scripts/utils/path.js';
+import { externalizeXWalkPrefix, externalizeXWalkPrefixLink } from '../../scripts/utils/path.js';
 
 const dayIdPattern = /^#day-(\d)$/;
 
@@ -93,7 +93,7 @@ function buildDayEntryCells(tr, entry, colSpan, speakerColumn) {
   }
   if (entry.talkPath) {
     const link = append(tdTitle, 'a');
-    link.href = externalizeXWalkPrefix(entry.talkPath);
+    link.href = externalizeXWalkPrefixLink(entry.talkPath);
     link.textContent = entry.title;
   } else {
     tdTitle.textContent = entry.title;

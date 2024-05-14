@@ -3,7 +3,7 @@ import { getScheduleData } from '../../scripts/services/ScheduleData.js';
 import { formatDateFull, formatTime } from '../../scripts/utils/datetime.js';
 import { append } from '../../scripts/utils/dom.js';
 import { parseCSVArray } from '../../scripts/utils/metadata.js';
-import { externalizeXWalkPrefix } from '../../scripts/utils/path.js';
+import { externalizeXWalkPrefix, externalizeXWalkPrefixLink } from '../../scripts/utils/path.js';
 import { getArchivePath, getSiteRootPath } from '../../scripts/utils/site.js';
 
 /**
@@ -20,7 +20,7 @@ function buildTalkTags(parent) {
   tags.forEach((tag) => {
     const li = append(ul, 'li');
     const a = append(li, 'a');
-    a.href = `${externalizeXWalkPrefix(getArchivePath(document.location.pathname))}#tags=${encodeURIComponent(tag)}`;
+    a.href = `${externalizeXWalkPrefixLink(getArchivePath(document.location.pathname))}#tags=${encodeURIComponent(tag)}`;
     a.textContent = tag;
   });
 }
