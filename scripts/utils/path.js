@@ -108,7 +108,7 @@ export function externalizeXWalkPrefix(pathName) {
 export function externalizeXWalkPrefixLink(pathName) {
   const externalized = externalizeXWalkPrefix(pathName);
   if (externalized.startsWith(xwalkPrefix)) {
-    const url = new URL(externalized);
+    const url = new URL(externalized, window.location);
     if (url.pathname.endsWith('/')) {
       url.pathname = `${url.pathname}index.html`;
     }
