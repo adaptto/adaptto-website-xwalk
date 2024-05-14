@@ -111,7 +111,9 @@ export function externalizeXWalkPrefixLink(pathName) {
     if (externalized.endsWith('/')) {
       return `${externalized}index.html`;
     }
-    return `${externalized}.html`;
+    if (!externalized.endsWith('.html')) {
+      return `${externalized}.html`;
+    }
   }
   return externalized;
 }
