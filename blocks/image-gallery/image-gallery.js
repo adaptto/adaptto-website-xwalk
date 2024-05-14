@@ -1,4 +1,5 @@
 import { createOptimizedPicture } from '../../scripts/aem.js';
+import { moveInstrumentation } from '../../scripts/scripts.js';
 import { append } from '../../scripts/utils/dom.js';
 import html from '../../scripts/utils/htmlTemplateTag.js';
 
@@ -189,8 +190,9 @@ function handleKeyboardNavigation(block, imageUrls) {
  */
 export default function decorate(block) {
   // collect list of all image gallery URLs
-  const imageUrls = Array.from(block.querySelectorAll('picture'))
-    .map((picture) => picture.querySelector('img')?.src)
+  const imageGalleryItems = Array.from(block.querySelectorAll(':scope > div'));
+  const imageUrls = imageGalleryItems
+    .map((div) => div.querySelector('img')?.src)
     .filter((url) => url !== undefined);
   if (imageUrls.length === 0) {
     return;
@@ -207,13 +209,17 @@ export default function decorate(block) {
 
   // list of image thumbnails
   const thumbList = block.querySelector('.gallery-thumb-list');
-  imageUrls.forEach((imageUrl, index) => {
+  imageGalleryItems.forEach((item, index) => {
     const li = append(thumbList, 'li');
+    moveInstrumentation(item, li);
     const a = append(li, 'a', 'gallery-thumb');
     a.href = buildHash(index, false);
     a.ariaLabel = `Image ${index + 1}`;
     const eager = (index <= 7);
-    a.append(createOptimizedPicture(imageUrl, '', eager, [{ width: '100' }]));
+    const image = item.querySelector('img');
+    const thumbnailPicture = createOptimizedPicture(image.src, '', eager, [{ width: '100' }]);
+    moveInstrumentation(image, thumbnailPicture.querySelector('img'));
+    a.append(thumbnailPicture);
   });
 
   // react to stage changes via hash
