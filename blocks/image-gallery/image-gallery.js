@@ -193,11 +193,11 @@ export default function decorate(block) {
   const imageGalleryItems = Array.from(block.querySelectorAll(':scope > div'));
   const imageUrls = imageGalleryItems
     .map((div) => div.querySelector('img')?.src)
-    .filter((url) => url != undefined);
+    .filter((url) => url !== undefined);
   if (imageUrls.length === 0) {
     return;
   }
-  
+
   // build gallery markup
   block.innerHTML = html`<div class="gallery-stage">
       <a class="gallery-prev">Previous</a>
