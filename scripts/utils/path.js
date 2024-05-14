@@ -107,15 +107,13 @@ export function externalizeXWalkPrefix(pathName) {
  */
 export function externalizeXWalkPrefixLink(pathName) {
   const externalized = externalizeXWalkPrefix(pathName);
-  if (!externalized.startsWith(xwalkPrefix)) {
-    return externalized;
+  if (externalized.startsWith(xwalkPrefix)) {
+    if (externalized.endsWith('/')) {
+      return `${externalized}index.html`;
+    }
+    return `${externalized}.html`;
   }
-  if (externalized.endsWith('/')) {
-    return externalized + 'index.html';
-  }
-  else {
-    return externalized + '.html';
-  }
+  return externalized;
 }
 
 /**
