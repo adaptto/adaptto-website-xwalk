@@ -190,12 +190,14 @@ function handleKeyboardNavigation(block, imageUrls) {
  */
 export default function decorate(block) {
   // collect list of all image gallery URLs
-  const images = Array.from(block.querySelectorAll('picture img'));
-  if (images.length === 0) {
+  const imageGalleryItems = Array.from(block.querySelectorAll(':scope > div'));
+  const imageUrls = imageGalleryItems
+    .map((div) => div.querySelector('img')?.src)
+    .filter((url) => url != undefined);
+  if (imageUrls.length === 0) {
     return;
   }
-  const imageUrls = images.map((img) => img.src);
-
+  
   // build gallery markup
   block.innerHTML = html`<div class="gallery-stage">
       <a class="gallery-prev">Previous</a>
@@ -207,12 +209,14 @@ export default function decorate(block) {
 
   // list of image thumbnails
   const thumbList = block.querySelector('.gallery-thumb-list');
-  images.forEach((image, index) => {
+  imageGalleryItems.forEach((item, index) => {
     const li = append(thumbList, 'li');
+    moveInstrumentation(item, li);
     const a = append(li, 'a', 'gallery-thumb');
     a.href = buildHash(index, false);
     a.ariaLabel = `Image ${index + 1}`;
     const eager = (index <= 7);
+    const image = item.querySelector('img');
     const thumbnailPicture = createOptimizedPicture(image.src, '', eager, [{ width: '100' }]);
     moveInstrumentation(image, thumbnailPicture.querySelector('img'));
     a.append(thumbnailPicture);
