@@ -1,4 +1,4 @@
-import { externalizeXWalkPrefix } from '../utils/path.js';
+import { externalizeXWalkPrefixLink } from '../utils/path.js';
 import Link from './Link.js';
 
 /**
@@ -11,7 +11,7 @@ export function rewriteUrl(url) {
   if (url) {
     const link = new Link(url);
     if (link.isAdaptToSiteUrl()) {
-      return externalizeXWalkPrefix(link.getAdaptToSiteUrlPath());
+      return externalizeXWalkPrefixLink(link.getAdaptToSiteUrlPath());
     }
   }
   return url;
@@ -30,7 +30,7 @@ export function decorateAnchor(a) {
   if (url) {
     const link = new Link(url);
     if (link.isAdaptToSiteUrl()) {
-      a.href = externalizeXWalkPrefix(link.getAdaptToSiteUrlPath());
+      a.href = externalizeXWalkPrefixLink(link.getAdaptToSiteUrlPath());
       if (link.isDownload()) {
         a.setAttribute('download', '');
       }

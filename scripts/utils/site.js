@@ -1,6 +1,6 @@
 import { append } from './dom.js';
 import { getQueryIndex } from '../services/QueryIndex.js';
-import { externalizeXWalkPrefix, getYearFromPath, splitXWalkPrefix } from './path.js';
+import { externalizeXWalkPrefixLink, getYearFromPath, splitXWalkPrefix } from './path.js';
 
 const siteRootRegex = /^(\/\d\d\d\d\/)(.+)?$/;
 const speakerPathRegex = /^\/speakers\/[^/]+$/;
@@ -151,8 +151,7 @@ export async function addArchiveLinks(nav) {
     queryIndex.getAllSiteRoots().forEach((siteRoot) => {
       const listItem = append(ul, 'li');
       const link = append(listItem, 'a');
-      const [prefix] = splitXWalkPrefix(document.location.pathname);
-      link.href = externalizeXWalkPrefix(siteRoot.path) + (prefix !== '' ? 'index.html' : '');
+      link.href = externalizeXWalkPrefixLink(siteRoot.path);
       link.textContent = siteRoot.title;
     });
   }
