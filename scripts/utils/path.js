@@ -108,12 +108,14 @@ export function externalizeXWalkPrefix(pathName) {
 export function externalizeXWalkPrefixLink(pathName) {
   const externalized = externalizeXWalkPrefix(pathName);
   if (externalized.startsWith(xwalkPrefix)) {
-    if (externalized.endsWith('/')) {
-      return `${externalized}index.html`;
+    const url = new URL(externalized);
+    if (url.pathname.endsWith('/')) {
+      url.pathname = `${url.pathname}index.html`;
     }
-    if (!externalized.endsWith('.html')) {
-      return `${externalized}.html`;
+    if (!url.pathname.endsWith('.html')) {
+      url.pathname = `${url.pathname}.html`;
     }
+    return url.toString();
   }
   return externalized;
 }
