@@ -95,6 +95,21 @@
           }
         },
         {
+          "title": "Image Gallery Folder",
+          "id": "image-gallery-folder",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "adaptto-xwalk/core/components/content/imageGalleryFolder",
+                "template": {
+                  "name": "Image Gallery Folder",
+                  "model": "image-gallery-folder"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Stage Header",
           "id": "stage-header",
           "plugins": {
