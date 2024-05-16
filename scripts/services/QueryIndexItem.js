@@ -58,7 +58,13 @@ export default class QueryIndexItem {
    * @returns {string[]} Tag values as array
    */
   getTags() {
-    return parseJsonArray(this.tags);
+    return parseJsonArray(this.tags)
+      .map(item => {
+        if (item.startsWith('adaptto:')) {
+          return item.substring('adaptto:'.length);
+        }
+        return item;
+      });
   }
 
   /**
