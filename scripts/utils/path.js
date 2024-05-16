@@ -117,6 +117,9 @@ export function externalizeXWalkPrefixLink(pathName) {
     }
     return url.toString();
   }
+  if (externalized.endsWith('/index')) {
+    return externalized.substring(0, externalized.length - 'index'.length);
+  }
   return externalized;
 }
 
