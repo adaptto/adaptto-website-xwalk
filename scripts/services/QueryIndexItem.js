@@ -59,7 +59,7 @@ export default class QueryIndexItem {
    */
   getTags() {
     return parseJsonArray(this.tags)
-      .map(item => {
+      .map((item) => {
         if (item.startsWith('adaptto:')) {
           return item.substring('adaptto:'.length);
         }
