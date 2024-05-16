@@ -115,7 +115,7 @@ export function externalizeXWalkPrefixLink(pathName) {
     if (!url.pathname.endsWith('.html')) {
       url.pathname = `${url.pathname}.html`;
     }
-    return url.toString().substring(url.origin);
+    return url.toString().substring(url.origin.length);
   }
   if (externalized.endsWith('/index')) {
     return externalized.substring(0, externalized.length - 'index'.length);
