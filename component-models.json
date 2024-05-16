@@ -323,5 +323,9 @@
   {
     "id": "schedule",
     "fields": []
+  },
+  {
+    "id": "talk-archive",
+    "fields": []
   }
 ]
