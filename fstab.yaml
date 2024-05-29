@@ -1,5 +1,5 @@
 mountpoints:
   /:
-    url: "https://author-p14256-e706089.adobeaemcloud.com/bin/franklin.delivery/adaptto/adaptto-website-xwalk/main"
+    url: "https://author-p14256-e706088.adobeaemcloud.com/bin/franklin.delivery/adaptto/adaptto-website-xwalk/main"
     type: "markup"
     suffix: ".html"
