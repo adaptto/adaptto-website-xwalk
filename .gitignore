@@ -5,3 +5,6 @@ node_modules/*
 
 helix-importer-ui
 .DS_Store
+/.env
+/localhost.crt
+/localhost.key
