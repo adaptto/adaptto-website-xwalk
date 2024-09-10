@@ -206,6 +206,20 @@
         "name": "cta2",
         "value": "",
         "label": "Second CTA Link"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "cta3Text",
+        "value": "",
+        "label": "Third CTA Text"
+      },
+      {
+        "component": "aem-content",
+        "valueType": "string",
+        "name": "cta3",
+        "value": "",
+        "label": "Third CTA Link"
       }
     ]
   },

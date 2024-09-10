@@ -37,7 +37,7 @@
 
 @font-face {
   font-family: SignikaLight;
-  src: url("/resources/font/Signika-Light-webfont.woff");
+  src: url("../resources/font/Signika-Light-webfont.woff");
   font-weight: normal;
   font-style: normal;
   font-display: optional;
@@ -45,7 +45,7 @@
 
 @font-face {
   font-family: SignikaRegular;
-  src: url("/resources/font/Signika-Regular-webfont.woff");
+  src: url("../resources/font/Signika-Regular-webfont.woff");
   font-weight: normal;
   font-style: normal;
   font-display: optional;
@@ -53,7 +53,7 @@
 
 @font-face {
   font-family: SignikaSemibold;
-  src: url("/resources/font/Signika-Semibold-webfont.woff");
+  src: url("../resources/font/Signika-Semibold-webfont.woff");
   font-weight: normal;
   font-style: normal;
   font-display: optional;
@@ -61,7 +61,7 @@
 
 @font-face {
   font-family: SignikaBold;
-  src: url("/resources/font/Signika-Bold-webfont.woff");
+  src: url("../resources/font/Signika-Bold-webfont.woff");
   font-weight: normal;
   font-style: normal;
   font-display: optional;
@@ -76,7 +76,7 @@ header .header-container .logo {
 header .header-container .logo div {
   width: 103px;
   height: 100px;
-  background: url("/resources/img/design-2023/logo.svg") 0 0 no-repeat;
+  background: url("../resources/img/design-2023/logo.svg") 0 0 no-repeat;
   background-size: 103px 100px;
   background-repeat: no-repeat;
 }

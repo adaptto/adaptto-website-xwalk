@@ -91,7 +91,7 @@ function decorateDependingOnConsent(service, parent, decorator) {
   } else if (isInitialized) {
     decorateConsentDialogMessage(service, parent);
   } else {
-    parent.innerHTML = html`<img class="usercentrics-loading-spinner usercentrics-placeholder" src="/resources/img/spinner.svg" alt=""/>`;
+    parent.innerHTML = html`<img class="usercentrics-loading-spinner usercentrics-placeholder" src="${window.hlx.codeBasePath}/resources/img/spinner.svg" alt=""/>`;
   }
 }
 
