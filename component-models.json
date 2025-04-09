@@ -220,6 +220,13 @@
         "name": "cta3",
         "value": "",
         "label": "Third CTA Link"
+      },
+      {
+        "component": "aem-experience-fragment",
+        "valueType": "string",
+        "name": "experience-fragment",
+        "label": "experience-fragment",
+        "variationName": "experienceFragmentVariation"
       }
     ]
   },
